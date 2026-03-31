@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip \
     libzip-dev \
-    && docker-php-ext-install zip pdo_mysql \
+    && docker-php-ext-install sockets pdo_mysql \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 FROM composer:latest AS composer-stage
